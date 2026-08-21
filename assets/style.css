@@ -140,27 +140,42 @@ a.navcta-mobile{display:none;}
 /* ===== Hero (home) ===== */
 .hero{
   position:relative; overflow:hidden;
-  padding:76px 0;
+  padding:150px 0 100px;
+  min-height:640px;
+  display:flex; align-items:center;
   background:var(--panel-dark);
-  background-image:
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 64px);
   color:#fff;
 }
-.hero-grid{display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;}
-@media (max-width:960px){ .hero-grid{grid-template-columns:1fr; gap:40px;} }
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:var(--hero-bg-img);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(15,17,20,0.5) 0%, rgba(15,17,20,0.78) 60%, rgba(15,17,20,0.92) 100%);
+}
+.hero-inner{
+  position:relative; z-index:1;
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  max-width:760px; margin:0 auto; padding:0 24px;
+}
 .hero .eyebrow{color:var(--red);}
 .hero .eyebrow::before{background:var(--red);}
 .hero h1{
-  font-size:clamp(32px,4.4vw,52px);
+  font-size:clamp(34px,5vw,58px);
   letter-spacing:0.01em;
   color:#fff;
-  max-width:12ch;
 }
 .hero h1 span{color:var(--red);}
 .hero p.lead{
-  font-size:16px; font-weight:400; color:#B7BBC0; max-width:46ch; margin:18px 0 30px;
+  font-size:16.5px; font-weight:400; color:#D8DADD; max-width:52ch; margin:18px auto 30px;
 }
-.hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+.hero-ctas{display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
 .btn{
   display:inline-flex; align-items:center; gap:10px;
   font-family:'Oswald', sans-serif; text-transform:uppercase; letter-spacing:0.03em;
@@ -173,31 +188,26 @@ a.navcta-mobile{display:none;}
 .btn-primary:hover{background:var(--red-dark); transform:translateY(-1px);}
 .btn-outline{background:rgba(255,255,255,0.92); color:var(--ink); border:1.5px solid var(--ink);}
 .btn-outline:hover{border-color:var(--red); color:var(--red); transform:translateY(-1px); background:#fff;}
-.hero .btn-outline{background:transparent; border-color:#4A4F55; color:#fff;}
+.hero .btn-outline{background:transparent; border-color:rgba(255,255,255,0.5); color:#fff;}
 .hero .btn-outline:hover{background:#fff; color:var(--ink); border-color:#fff;}
 .btn svg{width:16px; height:16px;}
 
-.hero-tags{display:flex; gap:10px; flex-wrap:wrap; margin-top:32px;}
+.hero-tags{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:34px;}
 .hero-tag{
   font-family:'JetBrains Mono', monospace; font-size:11.5px; letter-spacing:0.04em;
-  color:#D8DADD; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14);
+  color:#D8DADD; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
   padding:7px 12px; border-radius:20px;
 }
 
-.hero-photo{
-  border-radius:var(--radius); overflow:hidden; position:relative;
-  border:1px solid #33373D; box-shadow:0 24px 54px -20px rgba(0,0,0,0.65); background:#0F1114;
-  aspect-ratio:4/3;
-}
-.hero-photo img{width:100%; height:100%; object-fit:cover; display:block;}
-.hero-photo .cap{
-  position:absolute; left:0; right:0; bottom:0;
+.hero-caption{
+  position:absolute; left:0; right:0; bottom:0; z-index:1;
   display:flex; justify-content:space-between; align-items:center;
-  padding:12px 18px; background:rgba(21,23,27,0.82);
+  padding:14px 24px; background:rgba(15,17,20,0.88); border-top:1px solid rgba(255,255,255,0.08);
   font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.06em; color:#D8DADD;
 }
-.hero-photo .cap span:last-child{color:var(--green-led);}
-@media (max-width:560px){ .hero-photo .cap{font-size:9.5px; padding:10px 14px;} }
+.hero-caption span:last-child{color:var(--green-led);}
+@media (max-width:560px){ .hero-caption{font-size:9.5px; padding:10px 14px;} }
+@media (max-width:720px){ .hero{padding:130px 0 80px; min-height:560px;} }
 
 /* ===== Page header (subpages) ===== */
 .pagehead{
@@ -235,6 +245,8 @@ a.navcta-mobile{display:none;}
 }
 .photo-credit a{color:#7A7F85;}
 .pagehead + .photo-credit{margin-top:-1px;}
+.hero-photo-credit{background:var(--panel-dark); color:#7A7F85; padding:6px 24px 8px; margin:0;}
+.hero-photo-credit a{color:#7A7F85;}
 
 /* ===== Dashboard cluster stat strip ===== */
 .cluster{
