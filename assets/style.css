@@ -199,6 +199,19 @@ a.navcta-mobile{display:none;}
   padding:7px 12px; border-radius:20px;
 }
 
+.hero-fleet{
+  margin-top:36px; max-width:480px; width:100%;
+  border-radius:var(--radius); overflow:hidden;
+  border:1px solid rgba(255,255,255,0.18); box-shadow:0 20px 50px -18px rgba(0,0,0,0.7);
+  background:#0F1114;
+}
+.hero-fleet img{width:100%; height:auto; display:block;}
+.hero-fleet .cap{
+  padding:9px 16px;
+  background:rgba(15,17,20,0.9);
+  font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.06em; color:#D8DADD;
+  text-align:center;
+}
 .hero-caption{
   position:absolute; left:0; right:0; bottom:0; z-index:1;
   display:flex; justify-content:space-between; align-items:center;
