@@ -200,11 +200,15 @@ a.navcta-mobile{display:none;}
 }
 
 .hero-fleet{
+  display:block;
   margin-top:36px; max-width:480px; width:100%;
   border-radius:var(--radius); overflow:hidden;
   border:1px solid rgba(255,255,255,0.18); box-shadow:0 20px 50px -18px rgba(0,0,0,0.7);
   background:#0F1114;
+  text-decoration:none;
+  transition:transform .18s ease;
 }
+.hero-fleet:hover{transform:translateY(-2px);}
 .hero-fleet img{width:100%; height:auto; display:block;}
 .hero-fleet .cap{
   padding:9px 16px;
@@ -439,6 +443,52 @@ a.navcta-mobile{display:none;}
   box-shadow:var(--shadow);
 }
 .map-wrap iframe{width:100%; height:340px; border:0; display:block; filter:grayscale(0.15) contrast(1.02);}
+
+/* ===== Vehicle stock ===== */
+.stock-notice{
+  background:var(--green-soft); border:1px solid rgba(27,122,69,0.35); color:var(--green);
+  font-family:'JetBrains Mono', monospace; font-size:12.5px; line-height:1.6;
+  padding:16px 20px; border-radius:var(--radius); margin-bottom:36px;
+}
+.stock-intro{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:28px; flex-wrap:wrap;}
+.stock-intro p{color:var(--ink-soft); max-width:44ch; font-size:15px; margin:0;}
+.stock-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+@media (max-width:1000px){ .stock-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:640px){ .stock-grid{grid-template-columns:1fr;} }
+.stock-card{
+  position:relative; background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+  overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.stock-card:hover{transform:translateY(-3px);}
+.stock-badge{
+  position:absolute; top:12px; left:12px; z-index:2; background:var(--red); color:#fff;
+  font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+  padding:5px 10px; border-radius:20px;
+}
+.stock-photo{
+  aspect-ratio:4/3; background:var(--bg-alt); display:flex; align-items:center; justify-content:center;
+  flex-direction:column; gap:8px; color:var(--ink-faint); border-bottom:1px solid var(--border);
+}
+.stock-photo svg{width:52px; height:52px;}
+.stock-photo span{font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase;}
+.stock-body{padding:20px 20px 22px; display:flex; flex-direction:column; flex:1;}
+.stock-body h3{font-size:17px; margin-bottom:6px;}
+.stock-meta{
+  display:flex; gap:14px; font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--ink-soft);
+  margin-bottom:14px; flex-wrap:wrap;
+}
+.stock-price{font-family:'Oswald', sans-serif; font-weight:700; font-size:22px; color:var(--red); margin-bottom:14px;}
+.stock-specs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px;}
+.stock-specs span{
+  font-size:11.5px; font-weight:600; letter-spacing:0.02em; color:var(--ink-soft);
+  background:var(--bg-alt); border:1px solid var(--border); padding:5px 10px; border-radius:20px;
+}
+.stock-actions{display:flex; gap:8px; flex-wrap:wrap; margin-top:auto;}
+.stock-actions .btn{padding:10px 12px; font-size:11.5px; flex:1; justify-content:center; gap:6px;}
+.stock-actions .btn svg{width:14px; height:14px;}
+.btn-whatsapp{background:var(--green); color:#fff;}
+.btn-whatsapp:hover{background:#145c34; transform:translateY(-1px);}
 
 /* ===== Home page teasers ===== */
 .teaser-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
