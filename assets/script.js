@@ -35,3 +35,30 @@ if ('IntersectionObserver' in window) {
 }
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// order form: build a pre-filled email instead of posting to a backend
+const orderForm = document.getElementById('orderForm');
+if (orderForm) {
+  orderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const orderType = orderForm.orderType.value;
+    const fullName = orderForm.fullName.value.trim();
+    const phone = orderForm.phone.value.trim();
+    const email = orderForm.email.value.trim();
+    const details = orderForm.details.value.trim();
+
+    const subject = `Order Request: ${orderType} - ${fullName}`;
+    const bodyLines = [
+      `Order type: ${orderType}`,
+      `Name: ${fullName}`,
+      `Phone: ${phone}`,
+      email ? `Email: ${email}` : null,
+      '',
+      'Details:',
+      details
+    ].filter(line => line !== null);
+
+    const mailto = `mailto:sundayson26@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+    window.location.href = mailto;
+  });
+}

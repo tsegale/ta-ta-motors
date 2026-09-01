@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why Choose Us | Tatas Motors Namibia</title>
-<meta name="description" content="Nationwide network, guaranteed quality, flexible financing and honest advice: why customers choose Tatas Motors for vehicles, rentals, imports and parts.">
+<title>Place an Order | Tatas Motors Namibia</title>
+<meta name="description" content="Order a vehicle, engine, gearbox or auto part from Tatas Motors, Walvis Bay. Tell us what you need and we'll get back to you with pricing and availability.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -37,8 +37,8 @@
       <li><a href="stock.html">Vehicle Stock</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="network.html">Our Network</a></li>
-      <li><a href="why-us.html" class="active">Why Us</a></li>
-      <li><a href="order.html">Order</a></li>
+      <li><a href="why-us.html">Why Us</a></li>
+      <li><a href="order.html" class="active">Order</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="tel:+264836795137" class="btn btn-primary navcta-mobile">Call Now</a></li>
     </ul>
@@ -52,49 +52,71 @@
 
 <main>
 
-  <section class="pagehead" style="--pagehead-bg-img:url(img/whyus-windhoek.jpg);">
+  <section class="pagehead" style="--pagehead-bg-img:url(assets/img/hero-banner.jpg);">
     <div class="wrap">
-      <div class="eyebrow">Why partner with us</div>
-      <h1>Built on Reliability, Driven by Trust</h1>
-      <p class="lead">Backed by an inspection-grade commitment to quality, professionalism and honest advice at every step.</p>
+      <div class="eyebrow">Place an order</div>
+      <h1>Order a Vehicle, Engine, Gearbox or Part</h1>
+      <p class="lead">Tell us exactly what you need and our team will come back to you with pricing and availability.</p>
     </div>
   </section>
-  <div class="wrap photo-credit">Photo: Independence Avenue, Windhoek, Namibia &middot; <a href="https://commons.wikimedia.org/wiki/File:Downtown_Windhoek,_Independence_Avenue.jpg" target="_blank" rel="noopener">Greg Willis</a>, CC BY-SA 2.5</div>
 
-  <!-- ===== WHY CHOOSE US ===== -->
-  <section class="whychoose">
-    <div class="wrap why-grid">
-      <div class="reveal">
-        <div class="eyebrow">The short version</div>
-        <h2>Eight reasons customers stay with us</h2>
-        <p>From first enquiry to after the sale, our team is measured on honesty, response time and getting the paperwork right, not just moving stock.</p>
-        <div class="why-photo reveal">
-          <img src="assets/img/whyus-windhoek.jpg" alt="Downtown street in Windhoek, Namibia">
+  <!-- ===== ORDER FORM ===== -->
+  <section class="order">
+    <div class="wrap">
+      <div class="order-layout">
+
+        <form class="order-form reveal" id="orderForm">
+          <div class="form-group">
+            <label for="orderType">What are you ordering?</label>
+            <select id="orderType" name="orderType" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="Vehicle / Car">Vehicle / Car</option>
+              <option value="Engine">Engine</option>
+              <option value="Gearbox">Gearbox</option>
+              <option value="Auto Parts">Auto Parts</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+264" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (optional)</label>
+            <input type="email" id="email" name="email">
+          </div>
+
+          <div class="form-group">
+            <label for="details">Order details</label>
+            <textarea id="details" name="details" placeholder="Make, model &amp; year for a vehicle, or part/engine/gearbox spec, quantity and any preferences." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Order Request</button>
+          <p class="order-note">Submitting opens your email app with the order pre-filled, addressed to sundayson26@gmail.com. Prefer to talk it through? Call +264 83 679 5137.</p>
+        </form>
+
+        <div class="order-sidebar">
+          <div class="order-info-card reveal">
+            <h3>Vehicles</h3>
+            <p>Can&rsquo;t find the right make, model or spec in stock? Tell us and we&rsquo;ll source it.</p>
+          </div>
+          <div class="order-info-card reveal">
+            <h3>Engines &amp; Gearboxes</h3>
+            <p>Give us the make, model, engine code or transmission type and we&rsquo;ll quote you.</p>
+          </div>
+          <div class="order-info-card reveal">
+            <h3>Auto Parts</h3>
+            <p>From routine spares to harder-to-find parts, describe what you need and we&rsquo;ll check availability.</p>
+          </div>
         </div>
-      </div>
-      <ul class="checklist reveal">
-        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Nationwide automotive network</li>
-        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Quality guaranteed</li>
-        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Flexible financing options</li>
-        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Vehicle rentals</li>
-        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Imports &amp; exports</li>
-        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Special vehicle orders</li>
-        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Tyres &amp; auto parts</li>
-        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Professional customer service</li>
-      </ul>
-    </div>
-  </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-strip">
-    <div class="wrap">
-      <div>
-        <h2>See it for yourself</h2>
-        <p>Come by the showroom in Walvis Bay or call ahead to arrange a viewing.</p>
-      </div>
-      <div class="cta-actions">
-        <a href="tel:+264836795137" class="btn btn-primary">Call Now</a>
-        <a href="contact.html" class="btn btn-outline">Get In Touch</a>
       </div>
     </div>
   </section>

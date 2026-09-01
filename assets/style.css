@@ -444,6 +444,42 @@ a.navcta-mobile{display:none;}
 }
 .map-wrap iframe{width:100%; height:340px; border:0; display:block; filter:grayscale(0.15) contrast(1.02);}
 
+/* ===== Order form ===== */
+.order{background:var(--bg);}
+.order-layout{display:grid; grid-template-columns:1fr 0.8fr; gap:36px; align-items:start;}
+@media (max-width:900px){ .order-layout{grid-template-columns:1fr;} }
+.order-form{
+  background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+  padding:32px; box-shadow:var(--shadow);
+}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+@media (max-width:560px){ .form-row{grid-template-columns:1fr;} }
+.form-group{margin-bottom:18px;}
+.form-group label{
+  display:block; font-family:'Oswald', sans-serif; font-size:12.5px; font-weight:600;
+  letter-spacing:0.04em; text-transform:uppercase; color:var(--ink); margin-bottom:8px;
+}
+.form-group input, .form-group select, .form-group textarea{
+  width:100%; font-family:'Work Sans', sans-serif; font-size:14.5px; color:var(--ink);
+  background:var(--bg); border:1px solid var(--border); border-radius:var(--radius);
+  padding:12px 14px; transition:border-color .15s ease;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus{
+  outline:none; border-color:var(--red);
+}
+.form-group textarea{resize:vertical; min-height:120px; font-family:inherit;}
+.order-form .btn{width:100%; justify-content:center; margin-top:4px;}
+.order-note{
+  font-family:'JetBrains Mono', monospace; font-size:11.5px; line-height:1.6; color:var(--ink-faint); margin:14px 0 0;
+}
+.order-sidebar{display:flex; flex-direction:column; gap:16px;}
+.order-info-card{
+  background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+  padding:22px 24px; border-left:3px solid var(--red);
+}
+.order-info-card h3{font-size:15px; margin-bottom:8px;}
+.order-info-card p{font-size:13.5px; color:var(--ink-soft); margin:0;}
+
 /* ===== Vehicle stock ===== */
 .stock-notice{
   background:var(--green-soft); border:1px solid rgba(27,122,69,0.35); color:var(--green);
