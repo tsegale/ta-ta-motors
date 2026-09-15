@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Place an Order | Tatas Motors Namibia</title>
-<meta name="description" content="Order a vehicle, engine, gearbox or auto part from Tatas Motors, Walvis Bay. Tell us what you need and we'll get back to you with pricing and availability.">
+<title>Orders &amp; Bookings | Tatas Motors Namibia</title>
+<meta name="description" content="Order a vehicle, engine, gearbox or auto part, book a service or rental, or send a special order request to Tatas Motors, Walvis Bay. Tell us what you need and we'll get back to you.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -54,9 +54,9 @@
 
   <section class="pagehead" style="--pagehead-bg-img:url(img/hero-banner.jpg);">
     <div class="wrap">
-      <div class="eyebrow">Place an order</div>
-      <h1>Order a Vehicle, Engine, Gearbox or Part</h1>
-      <p class="lead">Tell us exactly what you need and our team will come back to you with pricing and availability.</p>
+      <div class="eyebrow">Orders &amp; bookings</div>
+      <h1>Order, Book a Service or Rental, or Send a Special Request</h1>
+      <p class="lead">Tell us exactly what you need and our team will come back to you with pricing, availability or a confirmed booking slot.</p>
     </div>
   </section>
 
@@ -67,14 +67,22 @@
 
         <form class="order-form reveal" id="orderForm">
           <div class="form-group">
-            <label for="orderType">What are you ordering?</label>
+            <label for="orderType">What do you need?</label>
             <select id="orderType" name="orderType" required>
               <option value="" disabled selected>Select an option</option>
               <option value="Vehicle / Car">Vehicle / Car</option>
               <option value="Engine">Engine</option>
               <option value="Gearbox">Gearbox</option>
               <option value="Auto Parts">Auto Parts</option>
+              <option value="Service Booking">Booking for Service</option>
+              <option value="Rental Booking">Booking for Rentals</option>
+              <option value="Special Order Request">Special Order Request</option>
             </select>
+          </div>
+
+          <div class="form-group" id="preferredDateGroup" hidden>
+            <label for="preferredDate">Preferred date</label>
+            <input type="date" id="preferredDate" name="preferredDate">
           </div>
 
           <div class="form-row">
@@ -94,12 +102,12 @@
           </div>
 
           <div class="form-group">
-            <label for="details">Order details</label>
-            <textarea id="details" name="details" placeholder="Make, model &amp; year for a vehicle, or part/engine/gearbox spec, quantity and any preferences." required></textarea>
+            <label for="details">Details</label>
+            <textarea id="details" name="details" placeholder="Make, model &amp; year for a vehicle order, part/engine/gearbox spec and quantity, service required, rental dates and vehicle type, or your special request." required></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary">Send Order Request</button>
-          <p class="order-note">Submitting opens your email app with the order pre-filled, addressed to sundayson26@gmail.com. Prefer to talk it through? Call +264 83 679 5137.</p>
+          <button type="submit" class="btn btn-primary">Send Request</button>
+          <p class="order-note">Submitting opens your email app with the request pre-filled, addressed to sundayson26@gmail.com. Prefer to talk it through? Call +264 83 679 5137.</p>
         </form>
 
         <div class="order-sidebar">
@@ -114,6 +122,14 @@
           <div class="order-info-card reveal">
             <h3>Auto Parts</h3>
             <p>From routine spares to harder-to-find parts, describe what you need and we&rsquo;ll check availability.</p>
+          </div>
+          <div class="order-info-card reveal">
+            <h3>Service Bookings</h3>
+            <p>Diagnostics and basic servicing. Pick a preferred date and we&rsquo;ll confirm a slot.</p>
+          </div>
+          <div class="order-info-card reveal">
+            <h3>Rental Bookings</h3>
+            <p>Short or long-term rentals for individuals, tourists, businesses and corporates.</p>
           </div>
         </div>
 
