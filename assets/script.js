@@ -73,7 +73,7 @@ if (orderForm) {
       details
     ].filter(line => line !== null);
 
-    const mailto = `mailto:sundayson26@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+    const mailto = `mailto:tata.autotrading@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
     window.location.href = mailto;
   });
 }
